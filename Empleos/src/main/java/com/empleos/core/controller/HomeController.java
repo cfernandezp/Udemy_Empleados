@@ -1,6 +1,8 @@
 package com.empleos.core.controller;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -56,6 +58,23 @@ public class HomeController {
 		model.addAttribute("vigente", vigente);
 
 		return "home";
+	}
+	
+	private List<Vacante> getVacantes(){
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
+		List<Vacante> lista = new LinkedList<>();
+		try {
+			// Creamos la oferta de trabajo 1
+			Vacante vacante1 = new Vacante();
+			vacante1.setId(1);
+			vacante1.setNombre("Ingeniero Cinvil");
+			
+		}
+		catch (ParseException e) {
+			
+		}
+		
+		return null;
 	}
 
 }
